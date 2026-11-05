@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<AnchorPane
+        xmlns:fx="http://javafx.com/fxml"
+        fx:controller="com.evelinsystem.arbol.controller.ArbolAvilController"
+        prefHeight="700.0"
+        prefWidth="1000.0">
+
+    <children>
+
+
+        <Label
+                layoutX="410.0"
+                layoutY="20.0"
+                text="ÁRBOL AVL"
+                style="-fx-font-size: 24px; -fx-font-weight: bold;"/>
+
+
+        <Label
+                layoutX="40.0"
+                layoutY="80.0"
+                text="Valor:"
+                style="-fx-font-size: 14px;"/>
+
+        <TextField
+                fx:id="txtValor"
+                layoutX="40.0"
+                layoutY="105.0"
+                prefWidth="180.0"
+                promptText="Ingrese un número"/>
+
+        <!-- Insert button -->
+        <Button
+                layoutX="250.0"
+                layoutY="105.0"
+                prefWidth="130.0"
+                text="Insertar"
+                onAction="#insertar"/>
+
+
+        <Button
+                layoutX="400.0"
+                layoutY="105.0"
+                prefWidth="130.0"
+                text="Buscar"
+                onAction="#buscar"/>
+
+
+        <Button
+                layoutX="550.0"
+                layoutY="105.0"
+                prefWidth="130.0"
+                text="InOrden"
+                onAction="#inOrden"/>
+
+
+        <Button
+                layoutX="700.0"
+                layoutY="105.0"
+                prefWidth="130.0"
+                text="PreOrden"
+                onAction="#preOrden"/>
+
+        <Button
+                layoutX="250.0"
+                layoutY="160.0"
+                prefWidth="130.0"
+                text="PostOrden"
+                onAction="#postOrden"/>
+
+        <!-- Clear button -->
+        <Button
+                layoutX="400.0"
+                layoutY="160.0"
+                prefWidth="130.0"
+                text="Vaciar"
+                onAction="#vaciar"/>
+
+
+        <Pane
+                fx:id="paneArbol"
+                layoutX="40.0"
+                layoutY="220.0"
+                prefWidth="900.0"
+                prefHeight="330.0"
+                style="-fx-border-color: black; -fx-background-color: white;"/>
+
+        <Label
+                layoutX="40.0"
+                layoutY="580.0"
+                text="Resultado:"
+                style="-fx-font-size: 14px; -fx-font-weight: bold;"/>
+
+        <TextArea
+                fx:id="txtResultado"
+                layoutX="120.0"
+                layoutY="570.0"
+                prefWidth="550.0"
+                prefHeight="70.0"
+                editable="false"
+                wrapText="true"/>
+
+
+        <Button
+                layoutX="760.0"
+                layoutY="585.0"
+                prefWidth="150.0"
+                prefHeight="40.0"
+                text="Regresar"
+                onAction="#Onregresar"/>
+
+    </children>
+
+</AnchorPane>

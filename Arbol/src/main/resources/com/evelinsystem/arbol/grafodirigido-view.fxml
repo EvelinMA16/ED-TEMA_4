@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="700.0" prefWidth="1000.0" style="-fx-background-color: #F5F1E8;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.evelinsystem.arbol.controller.GrafoDirigidoController">
+
+
+    <Label layoutX="380.0" layoutY="20.0" text="GRAFO DIRIGIDO">
+        <font>
+            <Font name="System Bold" size="25.0" />
+        </font>
+    </Label>
+
+
+    <Label layoutX="35.0" layoutY="100.0" text="AGREGAR VÉRTICE">
+        <font>
+            <Font name="System Bold" size="15.0" />
+        </font>
+    </Label>
+
+    <TextField fx:id="txtVertice" layoutX="35.0" layoutY="135.0" prefWidth="240.0" promptText="Nombre del vértice" />
+
+    <Button layoutX="35.0" layoutY="180.0" onAction="#agregarVertice" prefWidth="240.0" style="-fx-background-color: #3E7294;                    -fx-text-fill: white;" text="Agregar vértice" />
+
+    <Label layoutX="35.0" layoutY="250.0" text="CONECTAR VÉRTICES">
+        <font>
+            <Font name="System Bold" size="15.0" />
+        </font>
+    </Label>
+
+    <Label layoutX="35.0" layoutY="290.0" text="Origen:" />
+
+    <TextField fx:id="txtOrigen" layoutX="35.0" layoutY="315.0" prefWidth="240.0" promptText="Vértice de origen" />
+
+    <Label layoutX="35.0" layoutY="360.0" text="Destino:" />
+
+    <TextField fx:id="txtDestino" layoutX="35.0" layoutY="385.0" prefWidth="240.0" promptText="Vértice de destino" />
+
+    <Button layoutX="35.0" layoutY="430.0" onAction="#agregarConexion" prefWidth="240.0" style="-fx-background-color: #3E7294;                    -fx-text-fill: white;" text="Conectar vértices" />
+
+
+    <Label layoutX="556.0" layoutY="98.0" text="REPRESENTACIÓN DEL GRAFO">
+        <font>
+            <Font name="System Bold" size="16.0" />
+        </font>
+    </Label>
+
+    <Pane fx:id="paneGrafo" layoutX="320.0" layoutY="125.0" prefHeight="390.0" prefWidth="640.0" style="-fx-background-color: white;                  -fx-border-color: #A9B6C2;                  -fx-border-width: 1.5;" />
+
+
+    <Label layoutX="350.0" layoutY="535.0" text="RESULTADO">
+        <font>
+            <Font name="System Bold" size="15.0" />
+        </font>
+    </Label>
+
+    <TextArea fx:id="txtResultado" editable="false" layoutX="320.0" layoutY="565.0" prefHeight="85.0" prefWidth="640.0" wrapText="true" />
+
+
+    <Button layoutX="35.0" layoutY="510.0" onAction="#mostrarGrafo" prefWidth="240.0" style="-fx-background-color: #56856B;                    -fx-text-fill: white;" text="Mostrar grafo" />
+
+    <Button layoutX="35.0" layoutY="555.0" onAction="#vaciar" prefWidth="240.0" style="-fx-background-color: #B66B5D;                    -fx-text-fill: white;" text="Limpiar" />
+
+    <Button layoutX="736.0" layoutY="659.0" onAction="#Onregresar" prefHeight="26.0" prefWidth="133.0" style="-fx-background-color: #555555;                    -fx-text-fill: white;" text="Regresar" />
+   <Label layoutX="242.0" layoutY="56.0" text="Grafo donde las vertices se conectan mediante flachas que indican la direccion de  cada conexion" textFill="#4e18bc">
+      <font>
+         <Font size="14.0" />
+      </font>
+   </Label>
+    <Label layoutX="30.0" layoutY="440.0"
+           text="RECORRIDOS">
+        <font>
+            <Font name="System Bold" size="14.0"/>
+        </font>
+    </Label>
+
+    <TextField fx:id="txtInicio"
+               layoutX="30.0" layoutY="470.0"
+               prefWidth="220.0"
+               promptText="Vértice inicial"/>
+
+    <Button layoutX="30.0" layoutY="510.0"
+            prefWidth="220.0"
+            text="Recorrido BFS (Anchura)"
+            onAction="#mostrarRecorridoBFS"/>
+
+    <Button layoutX="30.0" layoutY="550.0"
+            prefWidth="220.0"
+            text="Recorrido DFS (Profundidad)"
+            onAction="#mostrarRecorridoDFS"/>
+</AnchorPane>

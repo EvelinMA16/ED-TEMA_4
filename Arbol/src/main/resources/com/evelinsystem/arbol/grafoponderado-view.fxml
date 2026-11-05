@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="700.0" prefWidth="1000.0" style="-fx-background-color: #F5F1E8;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.evelinsystem.arbol.controller.GrafoPonderadoController">
+
+    <children>
+
+        <Label layoutX="300.0" layoutY="20.0" text="GRAFO PONDERADO">
+            <font>
+                <Font name="System Bold" size="25.0" />
+            </font>
+        </Label>
+
+        <Label layoutX="30.0" layoutY="85.0" text="AGREGAR VÉRTICE">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Label>
+
+        <TextField fx:id="txtVertice" layoutX="30.0" layoutY="115.0" prefWidth="220.0" promptText="Nombre del vértice" />
+
+        <Button layoutX="30.0" layoutY="150.0" onAction="#agregarVertice" prefWidth="220.0" text="Agregar vértice" />
+
+        <Label layoutX="30.0" layoutY="205.0" text="AGREGAR CONEXIÓN">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Label>
+
+        <TextField fx:id="txtOrigen" layoutX="30.0" layoutY="235.0" prefWidth="220.0" promptText="Vértice de origen" />
+
+        <TextField fx:id="txtDestino" layoutX="30.0" layoutY="275.0" prefWidth="220.0" promptText="Vértice de destino" />
+
+        <TextField fx:id="txtPeso" layoutX="30.0" layoutY="315.0" prefWidth="220.0" promptText="Peso de la conexión" />
+
+        <Button layoutX="30.0" layoutY="355.0" onAction="#agregarConexion" prefWidth="220.0" text="Agregar conexión" />
+
+        <Label layoutX="92.0" layoutY="425.0" text="RECORRIDOS">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Label>
+
+        <TextField fx:id="txtInicio" layoutX="30.0" layoutY="445.0" prefWidth="220.0" promptText="Vértice inicial" />
+
+        <Button layoutX="30.0" layoutY="485.0" onAction="#mostrarRecorridoBFS" prefWidth="220.0" text="Recorrido BFS (Anchura)" />
+
+        <Button layoutX="30.0" layoutY="525.0" onAction="#mostrarRecorridoDFS" prefWidth="220.0" text="Recorrido DFS (Profundidad)" />
+
+        <Button layoutX="30.0" layoutY="585.0" onAction="#vaciar" prefWidth="105.0" text="Limpiar" />
+
+        <Button layoutX="145.0" layoutY="585.0" onAction="#Onregresar" prefWidth="105.0" text="Regresar" />
+
+        <Label layoutX="580.0" layoutY="95.0" text="REPRESENTACIÓN DEL GRAFO">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Label>
+
+        <Pane fx:id="paneGrafo" layoutX="300.0" layoutY="115.0" prefHeight="390.0" prefWidth="670.0" style="-fx-background-color: white;                      -fx-border-color: #C8BFAF;                      -fx-border-radius: 5;                      -fx-background-radius: 5;" />
+
+        <Label layoutX="555.0" layoutY="528.0" text="RESULTADOS">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Label>
+
+        <TextArea fx:id="txtResultado" editable="false" layoutX="300.0" layoutY="550.0" prefHeight="115.0" prefWidth="670.0" promptText="Aquí aparecerán las conexiones y los recorridos." wrapText="true" />
+      <Label layoutX="251.0" layoutY="56.0" prefHeight="18.0" prefWidth="410.0" text="Grafo donde las conexiones tenen peso que representan distancias" textFill="#cf0b0b" />
+
+    </children>
+</AnchorPane>

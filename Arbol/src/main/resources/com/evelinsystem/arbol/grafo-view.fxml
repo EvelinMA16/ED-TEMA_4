@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.evelinsystem.arbol.controller.GrafoController">
+
+    <VBox spacing="10" AnchorPane.bottomAnchor="15" AnchorPane.leftAnchor="25" AnchorPane.rightAnchor="25" AnchorPane.topAnchor="15">
+
+        <!-- Main title -->
+        <Label style="-fx-font-size: 26px; -fx-font-weight: bold;" text="GRAFO NO DIRIGIDO" />
+      <Label prefHeight="18.0" prefWidth="262.0" />
+
+        <!-- Add city -->
+        <HBox spacing="10">
+
+            <Label style="-fx-font-size: 15px;" text="Ciudad:" />
+
+            <TextField fx:id="txtCiudad" prefWidth="200" promptText="Nombre de ciudad" />
+
+            <Button onAction="#agregarCiudad" text="Agregar ciudad" />
+
+        </HBox>
+
+        <!-- Connect cities -->
+        <HBox spacing="10">
+
+            <Label style="-fx-font-size: 15px;" text="Conectar:" />
+
+            <TextField fx:id="txtCiudad1" prefWidth="150" promptText="Ciudad 1" />
+
+            <TextField fx:id="txtCiudad2" prefWidth="150" promptText="Ciudad 2" />
+
+            <Button onAction="#agregarConexion" text="Agregar conexión" textFill="#522ef2" />
+
+        </HBox>
+
+        <!-- Graph traversal -->
+        <Label style="-fx-font-size: 16px; -fx-font-weight: bold;" text="RECORRIDOS DEL GRAFO" />
+
+        <HBox spacing="10">
+
+            <TextField fx:id="txtInicio" prefWidth="200" promptText="Ciudad inicial" />
+
+            <Button onAction="#mostrarRecorridoBFS" text="Recorrido BFS (Anchura)" />
+
+            <Button onAction="#mostrarRecorridoDFS" text="Recorrido DFS (Profundidad)" />
+
+        </HBox>
+
+        <!-- Graph visualization -->
+        <Label style="-fx-font-size: 16px; -fx-font-weight: bold;" text="Visualización del grafo" />
+
+        <Pane fx:id="paneGrafo" prefHeight="320" prefWidth="950" style="-fx-background-color: #F5F5F5;                      -fx-border-color: #999999;" />
+
+        <!-- Graph buttons -->
+        <HBox spacing="10">
+
+            <Button onAction="#mostrarCiudades" text="Mostrar ciudades" />
+
+            <Button onAction="#vaciar" text="Vaciar grafo" />
+
+            <Button onAction="#Onregresar" text="Regresar" />
+
+        </HBox>
+
+        <!-- Results -->
+        <TextArea fx:id="txtResultado" editable="false" prefHeight="100" prefWidth="950" promptText="Aquí aparecerá la información del grafo y sus recorridos." wrapText="true" />
+
+    </VBox>
+
+</AnchorPane>

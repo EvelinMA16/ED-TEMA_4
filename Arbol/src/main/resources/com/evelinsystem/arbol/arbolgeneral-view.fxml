@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane
+        prefHeight="650.0"
+        prefWidth="1000.0"
+        xmlns="http://javafx.com/javafx/21"
+        xmlns:fx="http://javafx.com/fxml/1"
+        fx:controller="com.evelinsystem.arbol.controller.ArbolGeneralController">
+
+    <children>
+
+        <!-- Main title -->
+        <Label
+                layoutX="390.0"
+                layoutY="20.0"
+                text="ÁRBOL GENERAL"
+                style="-fx-font-size: 24px;
+                       -fx-font-weight: bold;" />
+
+        <!-- Root section -->
+        <Label
+                layoutX="30.0"
+                layoutY="80.0"
+                text="Raíz:"
+                style="-fx-font-weight: bold;" />
+
+        <TextField
+                fx:id="txtRaiz"
+                layoutX="30.0"
+                layoutY="105.0"
+                prefWidth="150.0"
+                promptText="Ingrese raíz" />
+
+        <Button
+                layoutX="190.0"
+                layoutY="105.0"
+                prefWidth="100.0"
+                text="Insertar"
+                onAction="#insertarRaiz" />
+
+        <!-- Parent section -->
+        <Label
+                layoutX="30.0"
+                layoutY="160.0"
+                text="Padre:"
+                style="-fx-font-weight: bold;" />
+
+        <TextField
+                fx:id="txtPadre"
+                layoutX="30.0"
+                layoutY="185.0"
+                prefWidth="150.0"
+                promptText="Valor padre" />
+
+        <!-- Child section -->
+        <Label
+                layoutX="30.0"
+                layoutY="225.0"
+                text="Hijo:"
+                style="-fx-font-weight: bold;" />
+
+        <TextField
+                fx:id="txtHijo"
+                layoutX="30.0"
+                layoutY="250.0"
+                prefWidth="150.0"
+                promptText="Valor hijo" />
+
+        <Button
+                layoutX="190.0"
+                layoutY="215.0"
+                prefWidth="100.0"
+                text="Agregar hijo"
+                onAction="#insertarHijo" />
+
+        <!-- Search section -->
+        <Label
+                layoutX="30.0"
+                layoutY="310.0"
+                text="Buscar nodo:"
+                style="-fx-font-weight: bold;" />
+
+        <TextField
+                fx:id="txtBuscar"
+                layoutX="30.0"
+                layoutY="335.0"
+                prefWidth="150.0"
+                promptText="Valor" />
+
+        <Button
+                layoutX="190.0"
+                layoutY="335.0"
+                prefWidth="100.0"
+                text="Buscar"
+                onAction="#buscarNodo" />
+
+        <!-- Tree operations -->
+        <Button
+                layoutX="30.0"
+                layoutY="395.0"
+                prefWidth="125.0"
+                text="Recorrido"
+                onAction="#mostrarRecorrido" />
+
+        <Button
+                layoutX="165.0"
+                layoutY="395.0"
+                prefWidth="125.0"
+                text="Limpiar"
+                onAction="#limpiarArbol" />
+
+        <!-- Return button -->
+        <Button
+                fx:id="btnRegresar"
+                layoutX="30.0"
+                layoutY="450.0"
+                prefWidth="260.0"
+                text="Regresar"
+                onAction="#regresar" />
+
+        <!-- Traversal result -->
+        <Label
+                layoutX="30.0"
+                layoutY="510.0"
+                text="Recorrido:"
+                style="-fx-font-weight: bold;" />
+
+        <TextField
+                fx:id="txtResultado"
+                layoutX="30.0"
+                layoutY="535.0"
+                prefWidth="260.0"
+                editable="false" />
+
+        <!-- Tree drawing area -->
+        <Pane
+                fx:id="paneArbol"
+                layoutX="320.0"
+                layoutY="65.0"
+                prefHeight="550.0"
+                prefWidth="650.0"
+                style="-fx-border-color: gray;
+                       -fx-border-width: 1px;
+                       -fx-background-color: #F5F1E8;" />
+
+    </children>
+
+</AnchorPane>

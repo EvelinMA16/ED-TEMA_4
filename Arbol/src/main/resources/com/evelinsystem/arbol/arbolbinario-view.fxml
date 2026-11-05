@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.evelinsystem.arbol.controller.ArbolBinarioController"
+            prefWidth="1000.0"
+            prefHeight="700.0">
+
+    <VBox spacing="12"
+          AnchorPane.topAnchor="20"
+          AnchorPane.leftAnchor="25"
+          AnchorPane.rightAnchor="25"
+          AnchorPane.bottomAnchor="20">
+
+        <Label text="ÁRBOL BINARIO"
+               style="-fx-font-size: 26px; -fx-font-weight: bold;"/>
+
+        <HBox spacing="10">
+
+            <Label text="Número:"
+                   style="-fx-font-size: 15px;"/>
+
+            <TextField fx:id="txtValor"
+                       promptText="Ingrese un número"
+                       prefWidth="200"/>
+
+            <Button fx:id="btnInsertar"
+                    text="Insertar"
+                    onAction="#insertar"/>
+
+            <Button fx:id="btnBuscar"
+                    text="Buscar"
+                    onAction="#buscar"/>
+
+            <Button fx:id="btnVaciar"
+                    text="Vaciar árbol"
+                    onAction="#vaciar"/>
+
+        </HBox>
+
+        <Label text="Visualización del árbol"
+               style="-fx-font-size: 16px; -fx-font-weight: bold;"/>
+
+        <Pane fx:id="paneArbol"
+              prefHeight="400"
+              prefWidth="950"
+              style="-fx-background-color: #F5F5F5; -fx-border-color: #999999;"/>
+
+        <HBox spacing="10">
+
+            <Button fx:id="btnInOrden"
+                    text="InOrden"
+                    onAction="#inOrden"/>
+
+            <Button fx:id="btnPreOrden"
+                    text="PreOrden"
+                    onAction="#preOrden"/>
+
+            <Button fx:id="btnPostOrden"
+                    text="PostOrden"
+                    onAction="#postOrden"/>
+
+        </HBox>
+
+        <TextArea fx:id="txtResultado"
+                  editable="false"
+                  prefHeight="80"
+                  promptText="Aquí aparecerán los recorridos."/>
+
+    </VBox>
+    <Button layoutX="516.0" layoutY="570.0" mnemonicParsing="false" onAction="#Onregresar" text="Regresar" />
+
+</AnchorPane>
